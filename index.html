@@ -23,7 +23,7 @@ button { margin-top:10px; padding:6px 12px; }
 
 <h2>Programação Dinâmica - Modelo Multiplicativo</h2>
 
-<p><strong>Regra:</strong> 
+<p><strong>✅Regra:</strong> 
 F(i,w)=max { L(i,x) · F(i−1,w−x) }
 </p>
 
@@ -160,6 +160,7 @@ function construirInterface(){
         let div=document.createElement("div");
         div.className="estagio";
         div.innerHTML+="<h3>Estágio "+i+"</h3>";
+        div.innerHTML += "<button onclick='corrigir()'>Corrigir</button>";
 
         let tabela="<table><tr>";
 
@@ -216,6 +217,7 @@ function construirSolucao(){
     }
 
     html+="<br><br>Valor Total Ótimo: <input type='number' step='any' id='lucroTotal'>";
+    html+= "<button onclick='corrigir()'>Corrigir</button>";
     html+="</div>";
 
     div.innerHTML=html;
